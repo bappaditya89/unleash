@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  max-width: 1225px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+/* Header */
+header {
+  background: #f7d063;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3.5rem;
+}
+.logo {
+  color: #737b91;
+  font-size: 2.5rem;
+  letter-spacing: 0.2rem;
+}
+
+ul {
+  display: flex;
+}
+li {
+  list-style: none;
+  padding: 0.5rem 1.5rem;
+}
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #002500;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #c4b486;
+  text-decoration: underline;
+}
+/* 1st section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5rem 3.5rem;
+  gap: 1rem;
+  background: #f7d063;
+}
+.txt {
+  flex: 2;
+}
+.txt span {
+  color: #737b91;
+  font-size: 3rem;
+}
+.txt h1 {
+  font-size: 3.5rem;
+  color: #f95738;
+  margin-bottom: 2rem;
+}
+
+.txt p {
+  font-size: 2rem;
+  color: #002500;
+}
+
+img {
+  flex: 1;
+  min-width: 30rem;
+  height: auto;
+  border-radius: 2.5rem;
+}
+/* Reason */
+.reason {
+  padding: 2rem;
+  border-bottom: #e29578 1px solid;
+}
+.reason > p {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #002500;
+  text-decoration: underline;
+}
+.sticker {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.pic {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin: 2rem;
+}
+.stack p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+/* Services */
+article {
+  padding: 3.5rem;
+  background: #f7d063;
+}
+.service h3 {
+  text-decoration: underline;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #002500;
+}
+article h1 {
+  font-size: 3rem;
+  color: #002500;
+  margin-bottom: 2rem;
+}
+.service p {
+  font-size: 1.3rem;
+}
+
+.service {
+  margin: 1rem 0;
+}
+/* Reviews */
+.reviews {
+  padding: 3.5rem;
+}
+.reviews h2 {
+  color: #002500;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.star p {
+  font-size: 1.3rem;
+}
+.star {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+em {
+  text-decoration: underline;
+}
+/* Book */
+main {
+  padding: 5rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  background: #f7d063;
+}
+main p {
+  font-size: 2.5rem;
+  color: #002500;
+}
+.cta {
+  padding: 1rem 2.5rem;
+  color: #e29578;
+  border-radius: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background: black;
+  letter-spacing: 0.5rem;
+  transition: all 0.3s;
+}
+.cta:hover {
+  background: #f7d063;
+  color: black;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 3.5rem;
+}
+footer p {
+  font-size: 1rem;
+  color: #002500;
+}
