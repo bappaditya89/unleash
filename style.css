@@ -6,9 +6,8 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
+
 body {
-  max-width: 1225px;
-  margin: 0 auto;
   font-size: 16px;
 }
 /* Header */
@@ -49,6 +48,9 @@ a:hover {
   text-decoration: underline;
 }
 /* 1st section */
+section {
+  background: linear-gradient(to right, #00120b, #042f24);
+}
 .intro {
   display: flex;
   align-items: center;
@@ -56,7 +58,6 @@ a:hover {
   flex-wrap: wrap;
   padding: 5rem 3.5rem;
   gap: 1rem;
-  background: linear-gradient(to right, #00120b, #042f24);
 }
 .txt {
   flex: 2;
@@ -83,9 +84,11 @@ a:hover {
   border-radius: 2.5rem;
 }
 /* Reason */
+.light {
+  background: #f2f1ed;
+}
 .reason {
   padding: 2rem;
-  background: #f2f1ed;
   overflow-x: hidden;
 }
 .reason > p {
@@ -182,29 +185,30 @@ em {
   text-decoration: underline;
 }
 /* Book */
-main {
+.main {
+  background: linear-gradient(to right, #00120b, #042f24);
   padding: 3.5rem;
+}
+.last {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  background: linear-gradient(to right, #00120b, #042f24);
 }
-main p {
+.main p {
   font-size: 2rem;
   color: #d8e4ff;
 }
 .cta {
-  padding: 1rem 2.5rem;
+  padding: 0.5rem 1rem;
   color: #00120b;
   border-radius: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   background: #d8e4ff;
   outline: 0;
   border: 0;
-  letter-spacing: 0.5rem;
   transition: all 0.3s;
 }
 .cta:hover {
@@ -215,12 +219,17 @@ main p {
 /* Footer */
 footer {
   text-align: center;
-  padding: 3.5rem;
+  padding: 2rem;
   background: #f2f1ed;
 }
 footer p {
   font-size: 1rem;
   color: #00120b;
+}
+
+.container {
+  max-width: 1225px;
+  margin: 0 auto;
 }
 /* media queries */
 @media (max-width: 864px) {
@@ -228,12 +237,7 @@ footer p {
     text-align: center;
   }
 }
-@media (max-width: 805px) {
-  main {
-    justify-content: center;
-    padding: 1.5rem;
-  }
-}
+
 @media (max-width: 695px) {
   li {
     padding: 0.5rem;
@@ -254,9 +258,7 @@ footer p {
   .reviews {
     padding: 1.5rem;
   }
-  main {
-    padding: 1.5rem;
-  }
+
   article h1 {
     text-align: center;
     font-size: 2rem;
@@ -265,6 +267,20 @@ footer p {
   .service h3,
   .service p {
     font-size: 1.3rem;
+  }
+}
+@media (max-width: 605px) {
+  .main {
+    padding: 2rem;
+  }
+}
+@media (max-width: 560px) {
+  .main p {
+    font-size: 1.5rem;
+  }
+  .cta {
+    padding: 0.5rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 535px) {
@@ -281,14 +297,13 @@ footer p {
     text-align: center;
   }
 }
+@media (max-width: 440px) {
+  .last {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 422px) {
-  .cta {
-    padding: 0.5rem 1rem;
-    font-size: 1.4rem;
-  }
-  main p {
-    font-size: 1.2rem;
-  }
   li a {
     font-size: 1rem;
   }
@@ -296,5 +311,8 @@ footer p {
 @media (max-width: 348px) {
   .intro img {
     min-width: 15rem;
+  }
+  .main {
+    padding: 1rem;
   }
 }
