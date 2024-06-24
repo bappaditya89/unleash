@@ -213,7 +213,6 @@ em {
   transition: all 0.3s;
 }
 .cta:hover {
-  /* background: #00120b; */
   background: transparent;
   color: #d8e4ff;
   border: 1px #d8e4ff solid;
@@ -254,12 +253,19 @@ footer p {
 .cont p {
   font-size: 2rem;
   color: #f2f1ed;
-  /* padding-left: 3rem; */
   text-align: center;
 }
 .btn {
   display: flex;
   gap: 2rem;
+}
+.rg {
+  background: #042f24;
+  color: #f2f1ed;
+}
+.rg:hover {
+  color: #042f24;
+  border: #042f24 1px solid;
 }
 .contact {
   display: flex;
@@ -268,8 +274,7 @@ footer p {
 }
 .social-media {
   flex: 1;
-  padding: 1rem 0;
-  margin: 3rem 0;
+  margin: 3rem;
 }
 .logo-end {
   display: flex;
@@ -398,6 +403,7 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 1rem;
   }
   .last {
     justify-content: center;
@@ -416,6 +422,14 @@ footer p {
     justify-content: center;
   }
 }
+@media (max-width: 381px) {
+  .social-media p {
+    text-align: center;
+  }
+  .social-media {
+  }
+}
+
 @media (max-width: 348px) {
   .intro img {
     min-width: 15rem;
