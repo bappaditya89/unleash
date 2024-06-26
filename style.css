@@ -91,6 +91,7 @@ section {
 .light {
   background: #f2f1ed;
 }
+
 .reason {
   padding: 2rem;
   overflow-x: hidden;
@@ -171,25 +172,52 @@ article h1 {
 /* Reviews */
 .rev {
   padding: 3.5rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
 }
-.rev h1 {
-  margin-bottom: 1.25rem;
+.container__left {
+  justify-self: center;
+  align-self: center;
+}
+.container__left h1 {
   font-size: 2.5rem;
-  color: #0c4638;
-}
-.review-card {
-  background: #d8e4ff;
-
   color: #00120b;
-  padding: 0.9rem;
-  margin: 0.6rem 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.review-text {
+.container__right {
+  display: grid;
+  gap: 2rem;
+}
+.card {
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #d8e4ff;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card__content {
+  display: flex;
+  gap: 1rem;
+}
+.card__content span i {
+  font-size: 2rem;
+  color: #042f24;
+}
+.card__details p {
+  font-style: italic;
+  color: #00120b;
+}
+.card__details h4 {
+  text-align: right;
   font-size: 1rem;
-  margin-bottom: 0.6rem;
+  color: #042f24;
 }
 
 /* Book */
@@ -274,10 +302,16 @@ footer p {
 .rg {
   background: #042f24;
   color: #f2f1ed;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
 }
 .rg:hover {
-  color: #042f24;
-  border: #042f24 1px solid;
+  color: #f2f1ed;
+  background: transparent;
+  border: #f2f1ed 1px solid;
   text-transform: uppercase;
 }
 .contact {
@@ -339,6 +373,11 @@ footer p {
 }
 
 /* media queries */
+@media (max-width: 1008px) {
+  .rev {
+    gap: 3rem;
+  }
+}
 @media (max-width: 864px) {
   .txt {
     text-align: center;
@@ -346,6 +385,10 @@ footer p {
   .hero-content-inner h1 {
     font-size: 2.125rem;
     margin-bottom: 3rem;
+  }
+  .rev {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem;
   }
 }
 
@@ -366,9 +409,6 @@ footer p {
   article {
     padding: 1.5rem;
   }
-  .reviews {
-    padding: 1.5rem;
-  }
 
   article h1 {
     text-align: center;
@@ -384,6 +424,12 @@ footer p {
   .g-item {
     flex: 1 1 calc(50% - 1.25rem);
     max-width: calc(50% - 1.25rem);
+  }
+  .container__left h1 {
+    text-align: center;
+  }
+  .rev {
+    gap: 1.5rem;
   }
 }
 @media (max-width: 605px) {
@@ -442,6 +488,12 @@ footer p {
     font-size: 1rem;
   }
   .hero-image {
+    padding: 1rem;
+  }
+  .rg {
+    padding: 0.8rem;
+  }
+  .hero-content-inner {
     padding: 1rem;
   }
 }
