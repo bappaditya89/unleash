@@ -179,12 +179,12 @@ article h1 {
   color: #0c4638;
 }
 .review-card {
-  background: linear-gradient(to left, #00120b, #042f24);
+  background: #d8e4ff;
 
-  color: white;
+  color: #00120b;
   padding: 0.9rem;
   margin: 0.6rem 0;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .review-text {
@@ -244,35 +244,26 @@ footer p {
 .background {
   background: #f2f1ed;
 }
-.hero-image {
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  text-align: center;
-  background: url(./Images/dogs2.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 3rem;
-}
-
 .hero-content {
-  position: relative;
-  width: 100%;
+  background-image: url(./Images/dogs1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+  align-items: end;
+  text-align: center;
 }
+
 .hero-content-inner {
-  bottom: 0.1rem;
-  padding: 0.5rem;
+  padding: 2rem;
   color: #f2f1ed;
 }
 
 .hero-content-inner h1 {
   font-size: 3.125rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 .tour {
   display: flex;
