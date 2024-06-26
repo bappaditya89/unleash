@@ -53,7 +53,9 @@ section {
   background: linear-gradient(to right, #00120b, #042f24);
 }
 .intro {
+  flex: 1;
   display: flex;
+
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -81,6 +83,7 @@ section {
 .intro img {
   flex: 1;
   min-width: 30rem;
+  max-width: 100%;
   height: auto;
   border-radius: 2.5rem;
 }
@@ -99,39 +102,45 @@ section {
   color: #00120b;
   text-decoration: underline;
 }
-
-.sticker {
+.town {
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  gap: 0.5rem;
-
   flex-wrap: wrap;
 }
-.fig {
+.box {
   flex: 1;
+  margin: 0.5rem;
+  background-color: #0c4638;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0.8rem;
-}
-.fig img {
-  max-width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-radius: 0.5rem;
-}
-.fig figcaption {
-  text-align: center;
-  color: #00120b;
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.8rem;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+}
+
+figure {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 5rem;
+}
+img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  align-self: auto;
+  border-radius: 0.8rem;
+}
+figcaption {
+  color: white;
 }
 
 /* Services */
@@ -160,32 +169,29 @@ article h1 {
   margin: 1rem 0;
 }
 /* Reviews */
-.reviews {
+.rev {
   padding: 3.5rem;
-  background: #f2f1ed;
-}
-.reviews h2 {
-  color: #00120b;
-  font-size: 2rem;
   text-align: center;
-  margin-bottom: 2rem;
 }
-.star p {
+.rev h1 {
+  margin-bottom: 1.25rem;
+  font-size: 2.5rem;
+  color: #0c4638;
+}
+.review-card {
+  background: linear-gradient(to left, #00120b, #042f24);
+
+  color: white;
+  padding: 0.9rem;
+  margin: 0.6rem 0;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.review-text {
   font-size: 1rem;
-  color: #00120b;
+  margin-bottom: 0.6rem;
 }
-.star {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: flex-end;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-em {
-  text-decoration: underline;
-}
+
 /* Book */
 
 .main {
@@ -223,14 +229,14 @@ em {
 /* Footer */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1rem;
   background: #f2f1ed;
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
 footer p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #00120b;
 }
 
@@ -243,10 +249,11 @@ footer p {
   max-width: 100%;
   height: auto;
   text-align: center;
-  background: url(./Images/dogs1.jpg);
+  background: url(./Images/dogs2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 3rem;
 }
 
 .hero-content {
@@ -255,11 +262,9 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0 auto;
 }
 .hero-content-inner {
-  position: absolute;
   bottom: 0.1rem;
   padding: 0.5rem;
   color: #f2f1ed;
@@ -308,17 +313,14 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.6rem;
   padding: 0.6rem;
   width: 100%;
 }
-
 .g-item {
   flex: 1 1 calc(33.333% - 1.25rem);
   box-sizing: border-box;
@@ -336,8 +338,9 @@ footer p {
   border-radius: 0.8rem;
 }
 .g-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
+
 /* Common container */
 .container {
   max-width: 1225px;
@@ -440,12 +443,15 @@ footer p {
     justify-content: space-evenly;
   }
   .logo-end a {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 422px) {
   li a {
     font-size: 1rem;
+  }
+  .hero-image {
+    padding: 1rem;
   }
 }
 
