@@ -306,12 +306,13 @@ article h1 {
 
 /* Gallery */
 .gall {
+  padding-bottom: 3rem;
 }
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .gal-item {
   position: relative;
