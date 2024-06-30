@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 body {
@@ -305,6 +305,8 @@ article h1 {
 }
 
 /* Gallery */
+.gall {
+}
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -333,19 +335,13 @@ article h1 {
 }
 
 /* Footer */
-footer {
+
+.foot {
   text-align: center;
   padding: 1rem;
   background: #f2f1ed;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
 }
-.foot {
-  position: relative;
-  height: 100%;
-}
+
 footer p {
   font-size: 0.8rem;
   color: #00120b;
@@ -435,7 +431,6 @@ footer p {
 }
 @media (max-width: 540px) {
   .last {
-    border: 1px red solid;
     flex-direction: column;
     gap: 0.8rem;
   }
@@ -469,7 +464,8 @@ footer p {
     text-align: center;
   }
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -499,9 +495,6 @@ footer p {
   }
   .hero-content-inner {
     padding: 1rem;
-  }
-  .gallery {
-    grid-template-columns: 1fr;
   }
 }
 
